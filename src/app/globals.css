@@ -16,12 +16,22 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  .p {
+    @apply text-secondary text-[24px] font-normal;
+  }
+
+  .h1 {
+    @apply text-[32px] leading-9 xl:text-[65px] text-primary xl:leading-[72px] font-extrabold;
+  }
+  .h2 {
+    @apply text-2xl xl:text-4xl text-primary font-bold;
+  }
+  .h3 {
+    @apply text-2xl mb-4 font-extrabold;
+  }
+
+  .btn {
+    @apply rounded-[16px] p-[16px] text-[26px] bg-primary w-full font-bold text-white tracking-[1px]  flex justify-center items-center transition-all duration-300;
+  }
 }

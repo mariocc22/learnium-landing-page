@@ -1,12 +1,23 @@
-import Image from "next/image";
+// sections
+import Header from "@/components/Header";
+import Contact from "@/components/sections/Contact";
+import Feature1 from "@/components/sections/Feature1";
+import Feature2 from "@/components/sections/Feature2";
+import Feature3 from "@/components/sections/Feature3";
+import Hero from "@/components/sections/Hero";
+import Team from "@/components/sections/Team";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-black">
-      <Image src="assets/in_progress.svg" alt="logo" width="500" height="500" />
-      <h1 className="text-white text-[32px] font-bold">
-        Landing Page In Progress...
-      </h1>
+    <main className="max-w-[1920px] bg-white mx-auto relative overflow-hidden ">
+      <Header />
+      <Hero />
+      <Feature1 />
+      <Feature2 />
+      <Feature3 />
+      <Team />
+      <Contact />
+      <div className="h-[4000px]"></div>
     </main>
   );
 }
