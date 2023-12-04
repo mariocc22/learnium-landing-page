@@ -43,18 +43,18 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }),
-    [];
+  }, []);
 
   return (
     // transition animation for header
     <header
       className={`${
-        header ? "bg-white shadow-md py-2" : "bg-transparent shadow-none py-4"
-      } fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300`}
+        header ? "bg-white shadow-md py-4 " : "bg-transparent shadow-none py-4 "
+      } fixed right-0 left-0  mx-auto z-20 xl:px-8 px-5  transition-all duration-300`}
     >
-      <div className="xl:container mx-auto flex flex-col mdx:flex-row mdx:items-center mdx:justify-between">
-        <div className="flex justify-between items-center px-4">
+      <div className=" mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between xl:max-w-[1440px]">
+        {/* logo */}
+        <div className="flex justify-between items-center">
           {/* logo */}
           <Link
             to="home"
@@ -65,8 +65,8 @@ const Header = () => {
             {tabletMode ? (
               <Image
                 src={"/assets/logo desktop.svg"}
-                width={250}
-                height={40}
+                width={245}
+                height={38}
                 alt="logo"
               />
             ) : (
@@ -82,7 +82,7 @@ const Header = () => {
           {/* nav open menu */}
           <div
             onClick={() => setNav(!nav)}
-            className="cursor-pointer mdx:hidden"
+            className="cursor-pointer xl:hidden"
           >
             {nav ? (
               <BiX className="text-4xl" />
@@ -96,74 +96,56 @@ const Header = () => {
         <nav
           className={`${
             nav
-              ? "max-h-max py-8 px-4 mdx:py-0 mdx:px-0"
-              : "max-h-0 mdx:max-h-max"
-          } flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold
-           mdx:font-medium mdx:flex-row mdx:w-max mdx:gap-x-8 mdx:h-max mdx:bg-transparent mdx:pb-0 transition-all duration-150 text-center mdx:text-left uppercase
-           text-sm mdx:text-[15px] mdx:normal-case`}
+              ? "max-h-max py-8 px-4 xl:py-0 xl:px-0 mt-6 "
+              : "max-h-0 xl:max-h-max"
+          } flex flex-col w-full  xl:w-fit xl:bg-white gap-y-6 overflow-hidden font-bold bg-tertiary rounded-2xl
+           xl:font-medium xl:flex-row xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left xl:items-center
+           text-sm xl:text-[15px] xl:normal-case xl:mt-0 `}
         >
           <Link
-            className="cursor-pointer"
-            to="home"
+            className="cursor-pointer navEl py-5 hover:bg-tertiary-hover transition-all duration-150 ease-in rounded-lg"
+            to="aboutus"
             activeClass="active"
             smooth={desktopMode}
             spy={true}
           >
-            Home
+            About Us
+          </Link>
+          <Link
+            className="cursor-pointer navEl py-5 hover:bg-tertiary-hover transition-all duration-150 ease-in rounded-lg"
+            to="features"
+            activeClass="active"
+            smooth={desktopMode}
+            spy={true}
+          >
+            Features
+          </Link>
+          <Link
+            className="cursor-pointer navEl py-5 hover:bg-tertiary-hover transition-all duration-150 ease-in rounded-lg"
+            to="team"
+            activeClass="active"
+            smooth={desktopMode}
+            spy={true}
+          >
+            The Team
+          </Link>
+          <Link
+            className="cursor-pointer navEl py-5 hover:bg-tertiary-hover transition-all duration-150 ease-in rounded-lg"
+            to="contactus"
+            activeClass="active"
+            smooth={desktopMode}
+            spy={true}
+          >
+            Contact Us
           </Link>
           <Link
             className="cursor-pointer"
-            to="cars"
+            to="project"
             activeClass="active"
             smooth={desktopMode}
             spy={true}
           >
-            Cars
-          </Link>
-          <Link
-            className="cursor-pointer"
-            to="about"
-            activeClass="active"
-            smooth={desktopMode}
-            spy={true}
-          >
-            About
-          </Link>
-          <Link
-            className="cursor-pointer"
-            to="why"
-            activeClass="active"
-            smooth={desktopMode}
-            spy={true}
-          >
-            Why us
-          </Link>
-          <Link
-            className="cursor-pointer"
-            to="testimonial"
-            activeClass="active"
-            smooth={desktopMode}
-            spy={true}
-          >
-            Testimonials
-          </Link>
-          <Link
-            className="cursor-pointer"
-            to="contact"
-            activeClass="active"
-            smooth={desktopMode}
-            spy={true}
-          >
-            Contact
-          </Link>
-          <Link
-            className="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto"
-            to="/"
-            activeClass="active"
-            smooth={desktopMode}
-            spy={true}
-          >
-            See all cars
+            <button className="btn text-[25px]">Project Proposal</button>
           </Link>
         </nav>
       </div>

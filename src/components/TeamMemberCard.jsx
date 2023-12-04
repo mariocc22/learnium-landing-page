@@ -10,7 +10,7 @@ const TeamMemberCard = ({ member }) => {
   return (
     <div className="flex w-fit flex-col items-center justify-center">
       {/* Image */}
-      <Image src={member?.image} width={170} height={148} />
+      <Image src={member?.image} width={200} height={200} />
       {/* Name */}
       <h3 className="text-[20px] font-bold text-center leading-5 mt-3">
         {member?.name}

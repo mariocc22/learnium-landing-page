@@ -3,14 +3,14 @@
 import Image from "next/image";
 
 // images
-import Edgar from "../../../public/assets/members/edgar.svg";
-import Genia from "../../../public/assets/members/genia.svg";
-import Nahla from "../../../public/assets/members/nahla.svg";
-import Pablo from "../../../public/assets/members/pablo.svg";
-import Tony from "../../../public/assets/members/tony.svg";
-import Vaib from "../../../public/assets/members/vaib.svg";
-import Wakana from "../../../public/assets/members/wakana.svg";
-import Mario from "../../../public/assets/members/mario.svg";
+import Edgar from "../../../public/assets/members/edgar.png";
+import Genia from "../../../public/assets/members/genia.png";
+import Nahla from "../../../public/assets/members/nahla.png";
+import Pablo from "../../../public/assets/members/pablo.png";
+import Tony from "../../../public/assets/members/tony.png";
+import Vaib from "../../../public/assets/members/vaib.png";
+import Wakana from "../../../public/assets/members/wakana.png";
+import Mario from "../../../public/assets/members/mario.png";
 import TeamMemberCard from "../TeamMemberCard";
 const teamMembers = [
   {
@@ -75,24 +75,24 @@ const teamMembers = [
 const Team = () => {
   return (
     <section
-      className="min-h-screen xl:h-[90vh] bg-white pb-[110px] pt-[60px] relative"
+      className="min-h-screen  bg-white pb-[110px] pt-[60px] relative"
       id="hero"
     >
       <div className="container mx-auto h-full xl:pt-10 flex items-center justify-center">
         <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full">
           <div>
             {/* Header */}
-            <h2 className="h2 text-[32px] py-6 px-8 bg-primary w-fit text-white rounded-2xl mb-8 ">
+            <h2 className="h2 text-[32px] xl:text-[64px] py-6 px-8 bg-primary w-fit text-white rounded-2xl mb-8 ">
               The Team
             </h2>
-            <p className="p mb-14">
+            <p className="p mb-14 xl:max-w-[659px]">
               Get to know the team that brought this app to life in just 12
               weeks! We designed and developed it from scratch, and we're
               excited to share our creation with you.
             </p>
 
             {/* Team Members */}
-            <div className="flex flex-wrap gap-5 items-center justify-between ">
+            <div className="flex flex-wrap items-center justify-center max-w-[1000px] xl:gap-14 gap-4 mx-auto">
               {teamMembers.map((member, index) => {
                 return <TeamMemberCard member={member} key={index} />;
               })}

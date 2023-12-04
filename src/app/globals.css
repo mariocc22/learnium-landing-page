@@ -34,4 +34,8 @@
   .btn {
     @apply rounded-[16px] p-[16px] text-[26px] bg-primary w-full font-bold text-white tracking-[1px]  flex justify-center items-center transition-all duration-300;
   }
+
+  .navEl {
+    @apply text-[24px] font-bold text-secondary text-center leading-7;
+  }
 }

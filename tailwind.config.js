@@ -23,7 +23,10 @@ module.exports = {
       colors: {
         primary: "#7000FF",
         secondary: "#262626",
-        tertiary: "#F5F5F5",
+        tertiary: {
+          DEFAULT: "#F5f5f5",
+          hover: "#E6E6E6",
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

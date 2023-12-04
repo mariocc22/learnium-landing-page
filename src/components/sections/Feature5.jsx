@@ -3,13 +3,13 @@
 import Image from "next/image";
 
 // icons
-import ProgressIcon from "../../../public/assets/icons/progress.svg";
+import FlameIcon from "../../../public/assets/icons/flame.svg";
 
 // images
-import Feature3Img from "../../../public/assets/feature3.png";
-import Lumi from "../../../public/assets/feature3Lumi.svg";
+import Feature5Img from "../../../public/assets/feature5.png";
+import Lumi from "../../../public/assets/feature5Lumi.svg";
 
-const Feature3 = () => {
+const Feature5 = () => {
   return (
     <section
       className="  bg-primary pb-[327px] pt-[60px] xl:py-[70px] relative"
@@ -20,15 +20,15 @@ const Feature3 = () => {
           {/* Container Header */}
           <div className="xl:max-w-[425px] z-10">
             <h3 className="h3 p-4 bg-white w-fit text-primary rounded-2xl ">
-              Feature #3
+              Feature #5
             </h3>
 
             {/* Container Text */}
             <div className="p-8 bg-white rounded-2xl mt-6">
               {/* Header container */}
               <div className="flex items-center justify-start gap-4 mb-6">
-                <Image src={ProgressIcon} width={31} height={41} />
-                <h2 className="h2">Progress Tracker</h2>
+                <Image src={FlameIcon} width={31} height={41} />
+                <h2 className="h2">Daily Challenge</h2>
               </div>
               <p className="p">
                 Our app makes studying not only effective but also fun and
@@ -40,11 +40,11 @@ const Feature3 = () => {
 
           {/* Container Image */}
           <div className="flex items-center justify-center mt-8 z-10">
-            <Image src={Feature3Img} width={617} height={660} />
+            <Image src={Feature5Img} width={548} height={771} />
           </div>
 
           {/* Lumi background */}
-          <div className="absolute bottom-0 left-0 z-0">
+          <div className="absolute bottom-0 -left-40 z-0">
             <Image src={Lumi} width={500} height={420} />
           </div>
         </div>
@@ -53,4 +53,4 @@ const Feature3 = () => {
   );
 };
 
-export default Feature3;
+export default Feature5;

@@ -6,18 +6,18 @@ import Image from "next/image";
 import ClockIcon from "../../../public/assets/icons/clock_planner.svg";
 
 // images
-import Lumi from "../../../public/assets/feature2Lumi.svg";
+import Lumi from "../../../public/assets/feature2.png";
 
 const Feature2 = () => {
   return (
     <section
-      className="min-h-screen xl:h-[90vh] bg-white pb-[110px] pt-[60px] relative"
+      className="min-h-screen xl:min-h-fit bg-white pb-[110px] xl:pb-[80px] pt-[60px] relative"
       id="hero"
     >
       <div className="container mx-auto h-full xl:pt-10 flex items-center justify-center">
-        <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full">
-          <div>
-            {/* Container Header */}
+        <div className="flex flex-col xl:flex-row-reverse justify-center items-center xl:justify-start h-full xl:gap-16">
+          {/* Container Header */}
+          <div className="xl:max-w-[425px]">
             <h3 className="h3 p-4 bg-primary w-fit text-white rounded-2xl ">
               Feature #2
             </h3>
@@ -35,11 +35,11 @@ const Feature2 = () => {
                 adventure.
               </p>
             </div>
+          </div>
 
-            {/* Container Image */}
-            <div className="flex items-center justify-center mt-8 ">
-              <Image src={Lumi} width={350} height={341} />
-            </div>
+          {/* Container Image */}
+          <div className="flex items-center justify-center mt-8 ">
+            <Image src={Lumi} width={660} height={660} />
           </div>
         </div>
       </div>
