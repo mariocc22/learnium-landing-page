@@ -6,7 +6,7 @@ import Image from "next/image";
 import ClockIcon from "../../../public/assets/icons/clock_planner.svg";
 
 // images
-import Lumi from "../../../public/assets/feature2.png";
+import Lumi from "../../../public/assets/feature2.webp";
 
 const Feature2 = () => {
   return (
@@ -26,20 +26,27 @@ const Feature2 = () => {
             <div className="p-8 bg-primary rounded-2xl mt-6">
               {/* Header container */}
               <div className="flex items-center justify-start gap-4 mb-6">
-                <Image src={ClockIcon} width={34} height={41} />
+                <Image src={ClockIcon} width={34} height={41} alt="feature 2" />
                 <h2 className="h2 text-white">Dynamic Study Planner</h2>
               </div>
               <p className="p text-white">
-                Our app makes studying not only effective but also fun and
-                engaging. Join us on a journey where learning is an exciting
-                adventure.
+                Learnium tailors study sessions to user’s learning preferences
+                and upcoming exam dates. The study plan is responsive to the
+                learner’s progress and quiz results and covers everything that
+                the learner needs to practice to achieve a certain result.
               </p>
             </div>
           </div>
 
           {/* Container Image */}
           <div className="flex items-center justify-center mt-8 ">
-            <Image src={Lumi} width={660} height={660} />
+            <Image
+              src={Lumi}
+              width={660}
+              height={660}
+              alt="lumi character"
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>

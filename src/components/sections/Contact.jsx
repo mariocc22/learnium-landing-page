@@ -6,7 +6,7 @@ import Image from "next/image";
 import ProgressIcon from "../../../public/assets/icons/progress.svg";
 
 // images
-import Feature3Img from "../../../public/assets/feature3.png";
+import Feature3Img from "../../../public/assets/feature3.webp";
 import Lumi from "../../../public/assets/feature3Lumi.svg";
 
 const Contact = () => {
@@ -27,7 +27,12 @@ const Contact = () => {
             <div className="p-8 bg-white rounded-2xl mt-6">
               {/* Header container */}
               <div className="flex items-center justify-start gap-4 mb-6">
-                <Image src={ProgressIcon} width={31} height={41} />
+                <Image
+                  src={ProgressIcon}
+                  width={31}
+                  height={41}
+                  alt="progress icon"
+                />
                 <h2 className="h2">Progress Tracker</h2>
               </div>
               <p className="p">
@@ -40,12 +45,24 @@ const Contact = () => {
 
           {/* Container Image */}
           <div className="flex items-center justify-center mt-8 z-10">
-            <Image src={Feature3Img} width={617} height={660} />
+            <Image
+              src={Feature3Img}
+              width={617}
+              height={660}
+              alt="lumi image"
+              className="w-full h-auto"
+            />
           </div>
 
           {/* Lumi background */}
           <div className="absolute bottom-0 left-0 z-0">
-            <Image src={Lumi} width={500} height={420} />
+            <Image
+              src={Lumi}
+              width={500}
+              height={420}
+              alt="lumi background"
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>

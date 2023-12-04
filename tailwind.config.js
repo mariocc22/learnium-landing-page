@@ -20,6 +20,10 @@ module.exports = {
     },
 
     extend: {
+      fontFamily: {
+        sans: ["var(--font-gabarito)"],
+        serif: ["var(--font-nunito)"],
+      },
       colors: {
         primary: "#7000FF",
         secondary: "#262626",

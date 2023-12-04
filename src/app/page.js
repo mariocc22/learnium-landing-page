@@ -23,7 +23,6 @@ export default function Home() {
       <Team />
       <Contact />
       <Footer />
-      <div className="h-[4000px]" />
     </main>
   );
 }

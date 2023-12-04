@@ -18,7 +18,7 @@
 
 @layer base {
   .p {
-    @apply text-secondary text-[24px] font-normal;
+    @apply text-secondary text-[24px] font-normal font-serif;
   }
 
   .h1 {

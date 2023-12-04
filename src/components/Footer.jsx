@@ -14,10 +14,6 @@ const Footer = () => {
     query: "(min-width: 1300px)",
   });
 
-  const tabletMode = useMediaQuery({
-    query: "(min-width: 900px)",
-  });
-
   return (
     // transition animation for header
     <footer className="bg-white shadow-md py-4 mx-auto xl:px-8 px-5  transition-all duration-300">
@@ -31,7 +27,7 @@ const Footer = () => {
             spy={true}
             className="cursor-pointer"
           >
-            {tabletMode ? (
+            {desktopMode ? (
               <Image
                 src={"../assets/logo desktop.svg"}
                 width={245}
@@ -50,7 +46,9 @@ const Footer = () => {
         </div>
 
         {/* copyright */}
-        <p>All rights reserved © 2023 Learnium Team</p>
+        <p className="hidden xl:block">
+          All rights reserved © 2023 Learnium Team
+        </p>
 
         {/* Proposal */}
 

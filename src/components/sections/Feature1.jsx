@@ -6,13 +6,13 @@ import Image from "next/image";
 import StudyIcon from "../../../public/assets/icons/book_study.svg";
 
 // images
-import Feature1Img from "../../../public/assets/feature1.png";
+import Feature1Img from "../../../public/assets/feature1.webp";
 import Lumi from "../../../public/assets/feature1Lumi.svg";
 
 const Feature1 = () => {
   return (
     <section
-      className="min-h-screen  bg-primary pb-[350px] xl:pb-2 pt-[60px] relative"
+      className="  bg-primary pb-[350px] xl:pb-[200px] pt-[60px] relative"
       id="hero"
     >
       <div className="container mx-auto h-full xl:pt-10 flex items-center justify-center">
@@ -26,25 +26,38 @@ const Feature1 = () => {
             <div className="p-8 bg-white rounded-2xl mt-6">
               {/* Header container */}
               <div className="flex items-center justify-start gap-4 mb-6">
-                <Image src={StudyIcon} width={31} height={41} />
+                <Image src={StudyIcon} width={31} height={41} alt="feature 1" />
                 <h2 className="h2">Interactive Content</h2>
               </div>
               <p className="p">
-                Our app makes studying not only effective but also fun and
-                engaging. Join us on a journey where learning is an exciting
-                adventure.
+                Learnium simplifies interactive content creation by allowing
+                users to upload PDFs, paste text, or capture book pages via OCR
+                technology. It scans and generates key topics for focused
+                learning, including quizzes, flashcards, and summaries.
               </p>
             </div>
           </div>
 
           {/* Container Image */}
           <div className="flex items-center justify-center mt-8 ">
-            <Image src={Feature1Img} width={783} height={515} />
+            <Image
+              src={Feature1Img}
+              width={783}
+              height={515}
+              alt="lumi phone"
+              className="w-full h-auto"
+            />
           </div>
 
           {/* Lumi background */}
           <div className="absolute bottom-0 left-0 z-0">
-            <Image src={Lumi} width={350} height={350} />
+            <Image
+              src={Lumi}
+              width={350}
+              height={350}
+              alt="lumi background"
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>

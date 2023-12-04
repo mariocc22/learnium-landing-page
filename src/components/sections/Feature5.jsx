@@ -6,13 +6,13 @@ import Image from "next/image";
 import FlameIcon from "../../../public/assets/icons/flame.svg";
 
 // images
-import Feature5Img from "../../../public/assets/feature5.png";
+import Feature5Img from "../../../public/assets/feature5.webp";
 import Lumi from "../../../public/assets/feature5Lumi.svg";
 
 const Feature5 = () => {
   return (
     <section
-      className="  bg-primary pb-[327px] pt-[60px] xl:py-[70px] relative"
+      className="  bg-primary pb-[327px] pt-[60px] xl:py-[70px] xl:pb-[180px] relative"
       id="hero"
     >
       <div className="container mx-auto h-full xl:pt-10 flex items-center justify-center">
@@ -27,25 +27,32 @@ const Feature5 = () => {
             <div className="p-8 bg-white rounded-2xl mt-6">
               {/* Header container */}
               <div className="flex items-center justify-start gap-4 mb-6">
-                <Image src={FlameIcon} width={31} height={41} />
+                <Image src={FlameIcon} width={31} height={41} alt="feature 5" />
                 <h2 className="h2">Daily Challenge</h2>
               </div>
               <p className="p">
-                Our app makes studying not only effective but also fun and
-                engaging. Join us on a journey where learning is an exciting
-                adventure.
+                Learnium's daily challenge feature enhances knowledge retention
+                and encourages consistent app use. It transforms free moments
+                into opportunities for productive learning, making it engaging
+                and beneficial for users.
               </p>
             </div>
           </div>
 
           {/* Container Image */}
           <div className="flex items-center justify-center mt-8 z-10">
-            <Image src={Feature5Img} width={548} height={771} />
+            <Image
+              src={Feature5Img}
+              width={548}
+              height={771}
+              alt="lumi phone"
+              className="w-full h-auto"
+            />
           </div>
 
           {/* Lumi background */}
-          <div className="absolute bottom-0 -left-40 z-0">
-            <Image src={Lumi} width={500} height={420} />
+          <div className="absolute bottom-0 -left-10 z-0">
+            <Image src={Lumi} width={400} height={420} alt="lumi background" />
           </div>
         </div>
       </div>
