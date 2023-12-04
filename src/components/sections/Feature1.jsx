@@ -9,15 +9,27 @@ import StudyIcon from "../../../public/assets/icons/book_study.svg";
 import Feature1Img from "../../../public/assets/feature1.webp";
 import Lumi from "../../../public/assets/feature1Lumi.svg";
 
+// motion
+import { motion, easeInOut } from "framer-motion";
+
+// variants
+import { fadeIn } from "@/utils/variants";
+
 const Feature1 = () => {
   return (
     <section
       className="  bg-primary pb-[350px] xl:pb-[200px] pt-[60px] relative"
-      id="hero"
+      id="feature-1"
     >
       <div className="container mx-auto h-full xl:pt-10 flex items-center justify-center">
         <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full xl:gap-16">
-          <div className="xl:max-w-[470px] z-10">
+          <motion.div
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="xl:max-w-[470px] z-10"
+          >
             {/* Container Header */}
             <h3 className="h3 p-4 bg-white w-fit text-primary rounded-2xl self-start">
               Feature #1
@@ -36,10 +48,16 @@ const Feature1 = () => {
                 learning, including quizzes, flashcards, and summaries.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Container Image */}
-          <div className="flex items-center justify-center mt-8 ">
+          <motion.div
+            variants={fadeIn("left", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="flex items-center justify-center mt-8 "
+          >
             <Image
               src={Feature1Img}
               width={783}
@@ -47,10 +65,16 @@ const Feature1 = () => {
               alt="lumi phone"
               className="w-full h-auto"
             />
-          </div>
+          </motion.div>
 
           {/* Lumi background */}
-          <div className="absolute bottom-0 left-0 z-0">
+          <motion.div
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="absolute bottom-0 left-0 z-0"
+          >
             <Image
               src={Lumi}
               width={350}
@@ -58,7 +82,7 @@ const Feature1 = () => {
               alt="lumi background"
               className="w-full h-auto"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

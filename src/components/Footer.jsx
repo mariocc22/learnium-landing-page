@@ -6,13 +6,29 @@ import Image from "next/image";
 // react scroll
 import { Link } from "react-scroll";
 
-// media query hook
-import { useMediaQuery } from "react-responsive";
+// react
+import { useEffect, useState } from "react";
+
+// svgs
+import LogoDesktop from "../../public/assets/logo desktop.svg";
+import LogoMobile from "../../public/assets/logo mobile.svg";
 
 const Footer = () => {
-  const desktopMode = useMediaQuery({
-    query: "(min-width: 1300px)",
-  });
+  const [desktopMode, setDesktopMode] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDesktopMode(window.innerWidth >= 1300);
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     // transition animation for header
@@ -29,17 +45,19 @@ const Footer = () => {
           >
             {desktopMode ? (
               <Image
-                src={"../assets/logo desktop.svg"}
-                width={245}
-                height={38}
+                src={LogoDesktop}
+                width={251}
+                height={39}
                 alt="logo"
+                className="w-full h-auto"
               />
             ) : (
               <Image
-                src={"../assets/logo mobile.svg"}
+                src={LogoMobile}
                 width={40}
                 height={40}
                 alt="logo"
+                className="w-full h-auto"
               />
             )}
           </Link>

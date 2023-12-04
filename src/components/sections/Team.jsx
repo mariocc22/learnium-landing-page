@@ -12,6 +12,13 @@ import Vaib from "../../../public/assets/members/vaib.png";
 import Wakana from "../../../public/assets/members/wakana.png";
 import Mario from "../../../public/assets/members/mario.png";
 import TeamMemberCard from "../TeamMemberCard";
+
+// motion
+import { motion, easeInOut } from "framer-motion";
+
+// variants
+import { fadeIn } from "@/utils/variants";
+
 const teamMembers = [
   {
     name: "Tony",
@@ -76,27 +83,40 @@ const Team = () => {
   return (
     <section
       className="min-h-screen  bg-white pb-[110px] pt-[60px] relative"
-      id="hero"
+      id="team"
     >
       <div className="container mx-auto h-full xl:pt-10 flex items-center justify-center">
         <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full">
           <div>
             {/* Header */}
-            <h2 className="h2 text-[32px] xl:text-[64px] py-6 px-8 bg-primary w-fit text-white rounded-2xl mb-8 ">
-              The Team
-            </h2>
-            <p className="p mb-14 xl:max-w-[659px]">
-              Get to know the team that brought this app to life in just 12
-              weeks! We designed and developed it from scratch, and we're
-              excited to share our creation with you.
-            </p>
+            <motion.div
+              variants={fadeIn("down", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+            >
+              <h2 className="h2 text-[32px] xl:text-[64px] py-6 px-8 bg-primary w-fit text-white rounded-2xl mb-8 ">
+                The Team
+              </h2>
+              <p className="p mb-14 xl:max-w-[659px]">
+                Get to know the team that brought this app to life in just 12
+                weeks! We designed and developed it from scratch, and we're
+                excited to share our creation with you.
+              </p>
+            </motion.div>
 
             {/* Team Members */}
-            <div className="flex flex-wrap items-center justify-center max-w-[1000px] xl:gap-14 gap-4 mx-auto">
+            <motion.div
+              variants={fadeIn("up", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+              className="flex flex-wrap items-center justify-center max-w-[1000px] xl:gap-14 gap-4 mx-auto"
+            >
               {teamMembers.map((member, index) => {
                 return <TeamMemberCard member={member} key={index} />;
               })}
-            </div>
+            </motion.div>
 
             {/* Container Image */}
             {/* <div className="flex items-center justify-center mt-8 ">

@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <section
       className="  bg-primary pb-[327px] pt-[60px] xl:py-[70px] relative"
-      id="hero"
+      id="contact"
     >
       <div className="container mx-auto h-full xl:pt-10 flex items-center justify-center">
         <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full xl:gap-8">
@@ -29,8 +29,8 @@ const Contact = () => {
               <div className="flex items-center justify-start gap-4 mb-6">
                 <Image
                   src={ProgressIcon}
-                  width={31}
-                  height={41}
+                  width={35}
+                  height={35}
                   alt="progress icon"
                 />
                 <h2 className="h2">Progress Tracker</h2>
