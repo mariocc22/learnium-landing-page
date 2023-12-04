@@ -1,70 +1,88 @@
 "use client";
 // next imports
 import Image from "next/image";
-
-// icons
-import ProgressIcon from "../../../public/assets/icons/progress.svg";
-
 // images
-import Feature3Img from "../../../public/assets/feature3.webp";
-import Lumi from "../../../public/assets/feature3Lumi.svg";
+import LumiContactTop from "../../../public/assets/ContactLumi.svg";
+import LumiContactBottom from "../../../public/assets/ContactLumiBottom.svg";
+import backgroundImage from '../../../public/assets/book.svg';
+
+// Will handle form submission here
+const handleSubmit = (event) => {
+  event.preventDefault();
+  console.log('Form submitted');
+};
+
+
 
 const Contact = () => {
   return (
-    <section
-      className="  bg-primary pb-[327px] pt-[60px] xl:py-[70px] relative"
-      id="hero"
-    >
-      <div className="container mx-auto h-full xl:pt-10 flex items-center justify-center">
-        <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full xl:gap-8">
-          {/* Container Header */}
-          <div className="xl:max-w-[425px] z-10">
-            <h3 className="h3 p-4 bg-white w-fit text-primary rounded-2xl ">
-              Feature #3
-            </h3>
+    <section className="relative mt-56">
 
-            {/* Container Text */}
-            <div className="p-8 bg-white rounded-2xl mt-6">
-              {/* Header container */}
-              <div className="flex items-center justify-start gap-4 mb-6">
-                <Image
-                  src={ProgressIcon}
-                  width={31}
-                  height={41}
-                  alt="progress icon"
-                />
-                <h2 className="h2">Progress Tracker</h2>
+      <div className="absolute w-full -top-72 z-10">
+        <Image src={LumiContactTop} width={500} height={420} alt="Let's talk" className="h-auto mx-auto " />
+      </div>
+      
+      <div className="relative flex flex-col justify-top items-center bg-primary min-h-screen z-20 pt-24">
+          <div className="w-full max-w-4xl text-left p-4">
+            <h2 className="text-4xl font-bold text-white">Let's talk</h2>
+          </div>
+          
+          <div
+            className="w-full max-w-4xl min-h-full p-6 rounded-lg bg-cover bg-top pt-24"
+            style={{ backgroundImage: `url(${backgroundImage.src})`, minHeight: '700px' }}
+          >
+            <div className="flex flex-col md:flex-row items-end md:space-x-6">
+              <div className="w-full md:w-1/2 bg-white p-6 rounded-lg">
+                <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+                  <div className="flex flex-col">
+                    <label htmlFor="name" className="text-sm font-semibold text-primary">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="mt-1 p-2 border-2 border-gray-200 rounded"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <label htmlFor="email" className="text-sm font-semibold text-primary">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="mt-1 p-2 border-2 border-gray-200 rounded"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <label htmlFor="message" className="text-sm font-semibold text-primary">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      required
+                      className="mt-1 p-2 border-2 border-gray-200 rounded"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    className="bg-primary text-white py-2 px-4 rounded hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50"
+                  >
+                    Send
+                  </button>
+                </form>
               </div>
-              <p className="p">
-                Our app makes studying not only effective but also fun and
-                engaging. Join us on a journey where learning is an exciting
-                adventure.
-              </p>
+              <div className="w-full md:w-1/2 p-6">
+                <Image src={LumiContactBottom} width={200} height={320} alt="Let's talk" className="h-auto mx-auto " />
+              </div>
             </div>
           </div>
-
-          {/* Container Image */}
-          <div className="flex items-center justify-center mt-8 z-10">
-            <Image
-              src={Feature3Img}
-              width={617}
-              height={660}
-              alt="lumi image"
-              className="w-full h-auto"
-            />
-          </div>
-
-          {/* Lumi background */}
-          <div className="absolute bottom-0 left-0 z-0">
-            <Image
-              src={Lumi}
-              width={500}
-              height={420}
-              alt="lumi background"
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
