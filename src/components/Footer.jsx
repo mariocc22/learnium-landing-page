@@ -69,16 +69,11 @@ const Footer = () => {
         </p>
 
         {/* Proposal */}
-
-        <Link
-          className="cursor-pointer"
-          to="project"
-          activeClass="active"
-          smooth={desktopMode}
-          spy={true}
-        >
-          <button className="btn w-fit text-[25px]">Project Proposal</button>
-        </Link>
+        <a href={"/learnium_proposal.pdf"} download="Learnium Proposal">
+          <button className="btn text-[25px] cursor-pointer transition-all duration-200 hover:-translate-y-1">
+            Project Proposal
+          </button>
+        </a>
       </div>
     </footer>
   );

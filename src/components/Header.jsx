@@ -8,6 +8,7 @@ import Image from "next/image";
 
 // react scroll
 import { Link } from "react-scroll";
+import { Link as LinkNext } from "next/link";
 
 // svgs
 import LogoDesktop from "../../public/assets/logo desktop.svg";
@@ -17,6 +18,9 @@ import LogoMobile from "../../public/assets/logo mobile.svg";
 import { BiX } from "react-icons/bi";
 import { IoMdMenu } from "react-icons/io";
 import Dropdown from "./Dropdown";
+
+// proposal
+// import proposal from "../../public/assets/proposal/learnium_proposal.pdf";
 
 const Header = () => {
   const [header, setHeader] = useState(false);
@@ -151,15 +155,11 @@ const Header = () => {
           >
             Contact Us
           </Link>
-          <Link
-            className="cursor-pointer"
-            to="project"
-            activeClass="active"
-            smooth={desktopMode}
-            spy={true}
-          >
-            <button className="btn text-[25px]">Project Proposal</button>
-          </Link>
+          <a href={"/learnium_proposal.pdf"} download="Learnium Proposal">
+            <button className="btn text-[25px] cursor-pointer transition-all duration-200 hover:-translate-y-1">
+              Project Proposal
+            </button>
+          </a>
         </nav>
       </div>
     </header>
