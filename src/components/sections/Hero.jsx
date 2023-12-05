@@ -34,7 +34,7 @@ const Hero = () => {
             variants={fadeIn("left", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className=" relative overflow-hidden w-full max-w-[398px] xl:w-[398px] h-[723px]  border-8 border-black rounded-[32px] mt-[2rem] bg-yellow-300"
           >
             {hasWindow && (
@@ -59,7 +59,7 @@ const Hero = () => {
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <h1 className="h1 mt-[32px] mb-[12px]">
               Discover the joy of learning

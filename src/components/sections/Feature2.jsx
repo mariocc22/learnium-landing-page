@@ -27,7 +27,7 @@ const Feature2 = () => {
             variants={fadeIn("left", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="xl:max-w-[425px]"
           >
             <h3 className="h3 p-4 bg-primary w-fit text-white rounded-2xl ">
@@ -55,7 +55,7 @@ const Feature2 = () => {
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="flex items-center justify-center mt-8 "
           >
             <Image

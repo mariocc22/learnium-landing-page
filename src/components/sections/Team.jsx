@@ -38,15 +38,15 @@ const teamMembers = [
     name: "Edgar",
     role: "Full-Stack Developer",
     image: Edgar,
-    github: "github page",
-    linkedin: "linkedin page",
+    github: "https://github.com/alvelx",
+    linkedin: "https://www.linkedin.com/in/edgarvelandia",
   },
   {
     name: "Mario",
     role: "Full-Stack Developer",
     image: Mario,
-    github: "github page",
-    linkedin: "linkedin page",
+    github: "https://github.com/mariocc22",
+    linkedin: "https://www.linkedin.com/in/mariocesena/",
   },
   {
     name: "Nahla",
@@ -66,16 +66,16 @@ const teamMembers = [
     name: "Wakana",
     role: "UX/UI Designer",
     image: Wakana,
-    linkedin: "linkedin page",
-    portfolio: "portfolio page",
+    linkedin: "https://www.linkedin.com/in/wakanakaneiwa/",
+    portfolio: "https://wakanakaneiwa.com/",
   },
   {
     name: "Pablo",
     role: "UX/UI Designer",
     image: Pablo,
-    linkedin: "linkedin page",
-    github: "github page",
-    portfolio: "portfolio page",
+    linkedin: "https://www.linkedin.com/in/palimv/",
+    github: "https://github.com/PaliTriesToDesign",
+    portfolio: "https://www.palitriestodesign.com/",
   },
 ];
 
@@ -93,7 +93,7 @@ const Team = () => {
               variants={fadeIn("down", 0.2)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <h2 className="h2 text-[32px] xl:text-[64px] py-6 px-8 bg-primary w-fit text-white rounded-2xl mb-8 ">
                 The Team
@@ -110,7 +110,7 @@ const Team = () => {
               variants={fadeIn("up", 0.2)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="flex flex-wrap items-center justify-center max-w-[1000px] xl:gap-14 gap-4 mx-auto"
             >
               {teamMembers.map((member, index) => {
