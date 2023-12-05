@@ -65,7 +65,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative mt-56">
-      <div className="relative flex flex-col justify-top items-center bg-primary min-h-screen z-20 pt-24 pb-10 overflow-hidden  ">
+      <div className="relative flex flex-col justify-top items-center bg-primary min-h-screen z-10 pt-24 pb-10 overflow-hidden  ">
         <motion.div
           variants={fadeIn("down", 0.4)}
           initial="hidden"
