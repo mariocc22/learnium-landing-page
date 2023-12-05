@@ -13,6 +13,9 @@ import Wakana from "../../../public/assets/members/wakana.png";
 import Mario from "../../../public/assets/members/mario.png";
 import TeamMemberCard from "../TeamMemberCard";
 
+// lumis
+import LumiContactTop from "../../../public/assets/ContactLumi.svg";
+
 // motion
 import { motion, easeInOut } from "framer-motion";
 
@@ -24,8 +27,8 @@ const teamMembers = [
     name: "Tony",
     role: "Full-Stack Developer",
     image: Tony,
-    github: "github page",
-    linkedin: "linkedin page",
+    github: "https://github.com/Tony-Thawatchai",
+    linkedin: "https://www.linkedin.com/in/tony-sa/",
   },
   {
     name: "Genia",
@@ -52,15 +55,15 @@ const teamMembers = [
     name: "Nahla",
     role: "UX/UI Designer",
     image: Nahla,
-    linkedin: "linkedin page",
-    portfolio: "portfolio page",
+    linkedin: "https://www.linkedin.com/in/nahlania/",
+    portfolio: "https://nahlania.com/",
   },
   {
     name: "Vaibhav",
     role: "UX/UI Designer",
     image: Vaib,
-    linkedin: "linkedin page",
-    portfolio: "portfolio page",
+    linkedin: "https://www.linkedin.com/in/vaibm/",
+    portfolio: "https://www.behance.net/vaibhavmalhotra2",
   },
   {
     name: "Wakana",
@@ -82,11 +85,11 @@ const teamMembers = [
 const Team = () => {
   return (
     <section
-      className="min-h-screen  bg-white pb-[110px] pt-[60px] relative"
+      className="min-h-screen  bg-white pb-[130px] pt-[60px] relative"
       id="team"
     >
       <div className="container mx-auto h-full xl:pt-10 flex items-center justify-center">
-        <div className="flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full">
+        <div className=" relative flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full">
           <div>
             {/* Header */}
             <motion.div
@@ -117,12 +120,23 @@ const Team = () => {
                 return <TeamMemberCard member={member} key={index} />;
               })}
             </motion.div>
-
-            {/* Container Image */}
-            {/* <div className="flex items-center justify-center mt-8 ">
-              <Image src={Lumi} width={350} height={341} />
-            </div> */}
           </div>
+          {/* Container Image */}
+          <motion.div
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.2 }}
+            className="absolute w-[420px]  -bottom-[520px] xl:right-[300px]  z-10 min-h-[420px]"
+          >
+            <Image
+              src={LumiContactTop}
+              width={500}
+              height={420}
+              alt="Let's talk"
+              className="w-full"
+            />
+          </motion.div>
         </div>
       </div>
     </section>
