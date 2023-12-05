@@ -154,7 +154,7 @@ const Contact = () => {
               </form>
               {emailSent && (
                 <p className="text-sm text-gray-600 mt-2">
-                  Email sent successfully! Thank you.'
+                  Email sent successfully! Thank you.
                 </p>
               )}
             </motion.div>
