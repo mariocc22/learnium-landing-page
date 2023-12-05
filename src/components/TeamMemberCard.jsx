@@ -1,10 +1,11 @@
-// next imports
+// next
 import Image from "next/image";
+import Link from "next/link";
 
 // icons
-import Github from "../../public/assets/icons/github.svg";
-import Linkedin from "../../public/assets/icons/linkedin.svg";
-import Portfolio from "../../public/assets/icons/portfolio.svg";
+import GithubIcon from "../../public/assets/icons/github.svg";
+import LinkedinIcon from "../../public/assets/icons/linkedin.svg";
+import PortfolioIcon from "../../public/assets/icons/portfolio.svg";
 
 const TeamMemberCard = ({ member }) => {
   return (
@@ -19,27 +20,39 @@ const TeamMemberCard = ({ member }) => {
       <p className="text-[12px] mb-3">{member?.role}</p>
       {/* Icons */}
       <div className="flex items-baseline justify-center gap-3">
-        <Image
-          src={Github}
-          width={20}
-          height={20}
-          alt="social media logo"
-          className="w-full h-auto"
-        />
-        <Image
-          src={Linkedin}
-          width={20}
-          height={20}
-          alt="social media logo"
-          className="w-full h-auto"
-        />
-        <Image
-          src={Portfolio}
-          width={20}
-          height={20}
-          alt="social media logo"
-          className="w-full h-auto"
-        />
+        {member?.github && (
+          <Link href={member.github}>
+            <Image
+              src={GithubIcon}
+              width={20}
+              height={20}
+              alt="Github icon"
+              className="w-full h-auto"
+            />
+          </Link>
+        )}
+        {member?.linkedin && (
+          <Link href={member.linkedin}>
+            <Image
+              src={LinkedinIcon}
+              width={20}
+              height={20}
+              alt="LinkedIn icon"
+              className="w-full h-auto"
+            />
+          </Link>
+        )}
+        {member?.portfolio && (
+          <Link href={member.portfolio}>
+            <Image
+              src={PortfolioIcon}
+              width={20}
+              height={20}
+              alt="Portfolio icon"
+              className="w-full h-auto"
+            />
+          </Link>
+        )}
       </div>
     </div>
   );

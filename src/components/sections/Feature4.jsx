@@ -28,7 +28,7 @@ const Feature4 = () => {
             variants={fadeIn("left", 0.4)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="xl:max-w-[425px] z-10"
           >
             <h3 className="h3 p-4 bg-primary w-fit text-white rounded-2xl ">
@@ -62,7 +62,7 @@ const Feature4 = () => {
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="flex items-center justify-center mt-8 z-10"
           >
             <Image
@@ -79,7 +79,7 @@ const Feature4 = () => {
             variants={fadeIn("up", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="absolute bottom-0 -right-20 z-0"
           >
             <Image src={Lumi} width={344} height={303} alt="lumi background" />
