@@ -8,17 +8,19 @@ import Image from "next/image";
 
 // react scroll
 import { Link } from "react-scroll";
+import { Link as LinkNext } from "next/link";
 
 // svgs
 import LogoDesktop from "../../public/assets/logo desktop.svg";
 import LogoMobile from "../../public/assets/logo mobile.svg";
 
-// media query hook
-import { useMediaQuery } from "react-responsive";
-
 // icons
 import { BiX } from "react-icons/bi";
 import { IoMdMenu } from "react-icons/io";
+import Dropdown from "./Dropdown";
+
+// proposal
+// import proposal from "../../public/assets/proposal/learnium_proposal.pdf";
 
 const Header = () => {
   const [header, setHeader] = useState(false);
@@ -70,7 +72,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* logo */}
           <Link
-            to="home"
+            to="aboutus"
             smooth={desktopMode}
             spy={true}
             className="cursor-pointer"
@@ -126,15 +128,15 @@ const Header = () => {
           >
             About Us
           </Link>
-          <Link
+          {/* <Link
             className="cursor-pointer navEl py-5 hover:bg-tertiary-hover xl:hover:bg-white transition-all duration-150 ease-in rounded-lg"
             to="features"
             activeClass="active"
             smooth={desktopMode}
             spy={true}
-          >
-            Features
-          </Link>
+          > */}
+          <Dropdown desktopMode={desktopMode} />
+          {/* </Link> */}
           <Link
             className="cursor-pointer navEl py-5 hover:bg-tertiary-hover xl:hover:bg-white transition-all duration-150 ease-in rounded-lg"
             to="team"
@@ -146,22 +148,18 @@ const Header = () => {
           </Link>
           <Link
             className="cursor-pointer navEl py-5 hover:bg-tertiary-hover xl:hover:bg-white transition-all duration-150 ease-in rounded-lg"
-            to="contactus"
+            to="contact"
             activeClass="active"
             smooth={desktopMode}
             spy={true}
           >
             Contact Us
           </Link>
-          <Link
-            className="cursor-pointer"
-            to="project"
-            activeClass="active"
-            smooth={desktopMode}
-            spy={true}
-          >
-            <button className="btn text-[25px]">Project Proposal</button>
-          </Link>
+          <a href={"/learnium_proposal.pdf"} download="Learnium Proposal">
+            <button className="btn text-[25px] cursor-pointer transition-all duration-200 hover:-translate-y-1">
+              Project Proposal
+            </button>
+          </a>
         </nav>
       </div>
     </header>
