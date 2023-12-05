@@ -80,6 +80,7 @@ const emailForm = useRef(null);
             <div className="flex flex-col md:flex-row items-end md:space-x-6">
               <div className="w-full md:w-1/2 bg-white p-6 rounded-lg">
                 <form onSubmit={handleSubmit} disabled={emailSending} ref={emailForm} className="flex flex-col space-y-4">
+
                   <div className="flex flex-col">
                     <label htmlFor="name" className="text-sm font-semibold text-primary">
                       Name

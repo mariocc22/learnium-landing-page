@@ -27,7 +27,7 @@ const Feature1 = () => {
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="xl:max-w-[470px] z-10"
           >
             {/* Container Header */}
@@ -55,7 +55,7 @@ const Feature1 = () => {
             variants={fadeIn("left", 0.4)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="flex items-center justify-center mt-8 "
           >
             <Image
@@ -72,7 +72,7 @@ const Feature1 = () => {
             variants={fadeIn("up", 0.4)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="absolute bottom-0 left-0 z-0"
           >
             <Image
