@@ -1,20 +1,66 @@
 "use client";
 // next imports
+import { useState, useRef } from "react";
 import Image from "next/image";
 // images
 import LumiContactTop from "../../../public/assets/ContactLumi.svg";
 import LumiContactBottom from "../../../public/assets/ContactLumiBottom.svg";
 import backgroundImage from '../../../public/assets/book.svg';
 
-// Will handle form submission here
-const handleSubmit = (event) => {
-  event.preventDefault();
-  console.log('Form submitted');
-};
-
 
 
 const Contact = () => {
+const [emailSending, setEmailSending] = useState(false);
+const [emailSent, setEmailSent] = useState(false);
+const emailForm = useRef(null);
+
+  const webAppUrl = 'https://script.google.com/macros/s/AKfycbxF2WR1K1Rq5iVYmt94bjopvTXN-27Z4RRwncDM6VjmLgARMd4Y6UQFurc0IVfTkJJW/exec';
+
+
+// Will handle form submission here
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setEmailSending(true);
+
+    const formData = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      message: event.target.message.value,
+    };
+
+    try {
+      const response = await fetch(webAppUrl, {
+        method: 'POST',
+        mode: 'no-cors', // Depending on the CORS policy of your endpoint
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully');
+        setEmailSent(true);
+        setEmailSending(false);
+        emailForm.current.reset();
+      } else {
+        console.log('Failed to send email');
+        setEmailSent(true);
+        setEmailSending(false);
+        emailForm.current.reset();
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+      setEmailSent(true);
+      setEmailSending(false);
+      emailForm.current.reset();
+    }
+
+    console.log('Form submitted');
+  };
+
+
   return (
     <section className="relative mt-56">
 
@@ -33,7 +79,8 @@ const Contact = () => {
           >
             <div className="flex flex-col md:flex-row items-end md:space-x-6">
               <div className="w-full md:w-1/2 bg-white p-6 rounded-lg">
-                <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+                <form onSubmit={handleSubmit} disabled={emailSending} ref={emailForm} className="flex flex-col space-y-4">
+
                   <div className="flex flex-col">
                     <label htmlFor="name" className="text-sm font-semibold text-primary">
                       Name
@@ -71,12 +118,18 @@ const Contact = () => {
                     ></textarea>
                   </div>
                   <button
+                    disabled={emailSending}
                     type="submit"
                     className="bg-primary text-white py-2 px-4 rounded hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50"
                   >
-                    Send
+                    { emailSending ? 'Sending...' : 'Send' }
                   </button>
                 </form>
+                { emailSent && (
+                  <p className="text-sm text-gray-600 mt-2">
+                    Email sent successfully! Thank you.'
+                  </p>
+                )}
               </div>
               <div className="w-full md:w-1/2 p-6">
                 <Image src={LumiContactBottom} width={200} height={320} alt="Let's talk" className="h-auto mx-auto " />
