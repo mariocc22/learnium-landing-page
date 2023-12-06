@@ -63,7 +63,7 @@ const teamMembers = [
     role: "UX/UI Designer",
     image: Vaib,
     linkedin: "https://www.linkedin.com/in/vaibm/",
-    portfolio: "https://www.behance.net/vaibhavmalhotra2",
+    portfolio: "https://www.vibingmotion.com/",
   },
   {
     name: "Wakana",
