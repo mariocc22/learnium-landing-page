@@ -22,7 +22,7 @@ const TeamMemberCard = ({ member }) => {
       {/* Icons */}
       <div className="flex items-baseline justify-center gap-3">
         {member?.github && (
-          <Link href={member.github}>
+          <a href={member.github}>
             <Image
               src={GithubIcon}
               width={20}
@@ -30,10 +30,10 @@ const TeamMemberCard = ({ member }) => {
               alt="Github icon"
               className="w-full h-auto"
             />
-          </Link>
+          </a>
         )}
         {member?.linkedin && (
-          <Link href={member.linkedin}>
+          <a href={member.linkedin}>
             <Image
               src={LinkedinIcon}
               width={20}
@@ -41,10 +41,10 @@ const TeamMemberCard = ({ member }) => {
               alt="LinkedIn icon"
               className="w-full h-auto"
             />
-          </Link>
+          </a>
         )}
         {member?.portfolio && (
-          <Link href={member.portfolio}>
+          <a href={member.portfolio}>
             <Image
               src={PortfolioIcon}
               width={20}
@@ -52,7 +52,7 @@ const TeamMemberCard = ({ member }) => {
               alt="Portfolio icon"
               className="w-full h-auto"
             />
-          </Link>
+          </a>
         )}
       </div>
     </div>
