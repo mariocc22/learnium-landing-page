@@ -13,7 +13,7 @@ import Image from "next/image";
 // scroll
 import { Link } from "react-scroll";
 
-const Dropdown = ({ desktopMode }) => {
+const Dropdown = ({ desktopMode, setNav, nav }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -65,6 +65,7 @@ const Dropdown = ({ desktopMode }) => {
           activeClass="active"
           smooth={desktopMode}
           spy={true}
+          onClick={() => setNav(!nav)}
         >
           Features
         </Link>

@@ -125,6 +125,7 @@ const Header = () => {
             activeClass="active"
             smooth={desktopMode}
             spy={true}
+            onClick={() => setNav(!nav)}
           >
             About Us
           </Link>
@@ -135,7 +136,7 @@ const Header = () => {
             smooth={desktopMode}
             spy={true}
           > */}
-          <Dropdown desktopMode={desktopMode} />
+          <Dropdown desktopMode={desktopMode} setNav={setNav} nav={nav} />
           {/* </Link> */}
           <Link
             className="cursor-pointer navEl py-5 hover:bg-tertiary-hover xl:hover:bg-white transition-all duration-150 ease-in rounded-lg"
@@ -143,6 +144,7 @@ const Header = () => {
             activeClass="active"
             smooth={desktopMode}
             spy={true}
+            onClick={() => setNav(!nav)}
           >
             The Team
           </Link>
@@ -152,6 +154,7 @@ const Header = () => {
             activeClass="active"
             smooth={desktopMode}
             spy={true}
+            onClick={() => setNav(!nav)}
           >
             Contact Us
           </Link>

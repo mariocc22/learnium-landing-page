@@ -12,7 +12,7 @@ import Team from "@/components/sections/Team";
 
 export default function Home() {
   return (
-    <main className="max-w-[1440px] bg-white mx-auto relative overflow-hidden ">
+    <main className="bg-white mx-auto relative overflow-hidden ">
       <Header />
       <Hero />
       <Feature1 />

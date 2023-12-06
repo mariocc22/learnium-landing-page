@@ -24,7 +24,7 @@ const Hero = () => {
 
   return (
     <section
-      className="h-min-screen  pb-[62px] xl:pt-[40px] pt-[80px]"
+      className="h-min-screen pb-[62px] xl:pt-[40px] pt-[80px] "
       id="aboutus"
     >
       <div className="container mx-auto h-full xl:pt-20 flex items-center justify-center">
@@ -38,7 +38,7 @@ const Hero = () => {
             className=" relative overflow-hidden w-full max-w-[398px] xl:w-[398px] h-[723px]  border-8 border-black rounded-[32px] mt-[2rem] bg-yellow-300"
           >
             {hasWindow && (
-              <div className="absolute -left-10 -top-3 right-10">
+              <div className="absolute -left-[70px] -top-3 right-10 sm:-left-14 md:-left-10">
                 <ReactPlayer
                   width="460px"
                   height="723px"
@@ -75,9 +75,9 @@ const Hero = () => {
               to={`feature-1`}
               spy={true}
               smooth={true}
-              className="cursor-pointer"
+              className="cursor-pointer w-fit block "
             >
-              <button className="btn md:w-max md:mx-auto xl:mx-0">
+              <button className="btn md:w-max  md:mx-auto xl:mx-0">
                 See Features
               </button>
             </Link>

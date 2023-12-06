@@ -18,7 +18,7 @@ import { fadeIn } from "@/utils/variants";
 const Feature1 = () => {
   return (
     <section
-      className="  bg-primary pb-[350px] xl:pb-[200px] pt-[60px] relative"
+      className="   bg-primary pb-[350px] xl:pb-[200px] pt-[60px] relative "
       id="feature-1"
     >
       <div className="container mx-auto h-full xl:pt-10 flex items-center justify-center">
@@ -73,7 +73,7 @@ const Feature1 = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.2 }}
-            className="absolute bottom-0 left-0 z-0"
+            className="absolute bottom-0 left-0 z-0 2xl:left-16"
           >
             <Image
               src={Lumi}

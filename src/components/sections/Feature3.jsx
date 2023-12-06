@@ -79,7 +79,7 @@ const Feature3 = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.2 }}
-            className="absolute bottom-0 left-0 z-0"
+            className="absolute bottom-0 left-0 z-0 2xl:left-16"
           >
             <Image
               src={Lumi}

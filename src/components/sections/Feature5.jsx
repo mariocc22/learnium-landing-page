@@ -74,7 +74,7 @@ const Feature5 = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.2 }}
-            className="absolute bottom-0 -left-10 z-0"
+            className="absolute bottom-0 -left-10 z-0 2xl:left-16"
           >
             <Image src={Lumi} width={310} height={292} alt="lumi background" />
           </motion.div>
